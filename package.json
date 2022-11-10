@@ -2,9 +2,10 @@
   "name": "issue-mailer-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server"
   },
   "author": "Joseph T Vasquez",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "jsonwebtoken": "^8.5.1",
     "knex": "^2.3.0",
     "morgan": "^1.10.0",
+    "node-mailjet": "^5.1.1",
     "pg": "^8.8.0"
   }
 }
