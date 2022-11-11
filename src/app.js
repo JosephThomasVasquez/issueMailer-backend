@@ -22,9 +22,18 @@ app.use(
 );
 app.use(express.json());
 
+const errorHandler = require("./errors/errorHandler");
+const notFound = require("./errors/notFound");
+
 //_____________________________________________________________________________________________________
 
 // Routers
+const issueMailerRouter = require("./issueMailer/issueMailer.router");
+
+app.use("/api/mailer/sendmail", issueMailerRouter);
+
+app.use(notFound);
+app.use(errorHandler);
 
 // Exports
 module.exports = app;
