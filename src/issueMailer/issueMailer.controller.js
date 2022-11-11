@@ -34,12 +34,13 @@ const sendMail = async (req, res, next) => {
       html: `
       <div>
       <h2>${"Issue Location"} ${"Issue Category"}</h2>
-      <p></p>
+      <img src="cid:unique@nodemailer.com"/>
       </div>`,
       attachments: [
         {
           filename: "RobloxScreenShot20200120_124021549.png",
           path: "./RobloxScreenShot20200120_124021549.png",
+          cid: "unique@nodemailer.com",
         },
       ],
     };
